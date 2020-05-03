@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Producto</title>
+</head>
+<body>
+		<h1>Ingrese Prodcuto</h1>
+		<form method="post" th:action="@{/procesar}" th:object="${producto}">
+						<div>
+	            		<label  for="codigo">Codigo:</label>
+	            				                    	<br><input  th:field="*{codigo}" id="codigo" type="text" placeholder="Ingrese codigo" style="width: 400px" name="codigo" />
+	            			<div></div><span th:errors="*{codigo}" style="color: #FF0000"></span></div>
+	            		<div/>
+	            			<div>
+	                    <label for="nombreProducto">nombreProducto:</label>
+	                    	                    	<br>
+	                    	<input  th:field="*{nombreProducto}" id="password" type="text" placeholder="Ingrese nombre del Producto" style="width: 400px" name="nombreProducto"/>
+	                   		<div></div><span th:errors="*{nombreProducto}" style="color: #FF0000"></span></div>
+	                  	<div/>
+	                  	<div>	
+	                   	<label for="marca">marca</label>
+	                    	<br><input  th:field="*{marca}" id="marca" type="text" placeholder="Ingrese la marca" style="width: 400px" name="marca"/>
+	                   		<div><span th:errors="*{marca}" style="color: #FF0000"></span></div>
+	                   	<div/>
+	                   		
+	                   	<div>	
+	                   	<label for="descripcion">descripcion</label>
+	                    	<br><input  th:field="*{descripcion}" id="password" type="text" placeholder="Ingrese descripcion" style="width: 400px" name="descripcion"/>
+	                   		<div><span th:errors="*{descripcion}" style="color: #FF0000"></span></div>
+	                   	<div/>	
+	                   	<label for="existencias">existencias</label>
+	                    	<br><input  th:field="*{existencias}" id="existencias" type="text" placeholder="Ingrese existencias" style="width: 400px" name="existencias"/>
+	                   		<div><span th:errors="*{existencias}" style="color: #FF0000"></span></div>
+	                   		
+	                   	<div>	
+	                   	<label for="fechaIngreso">fechaIngreso</label>
+	                    	<br><input  th:field="*{fechaIngreso}" id="fechaIngreso" type="text" placeholder="Ingrese fecha de Ingreso" style="width: 400px" name="fechaIngreso"/>
+	                   		<div><span th:errors="*{fechaIngreso}" style="color: #FF0000"></span></div>
+	                    <div/>
+	                    <br>
+	                   <input type="submit" value="Guardar Producto">
+	                </form>
+</body>
+</html>
