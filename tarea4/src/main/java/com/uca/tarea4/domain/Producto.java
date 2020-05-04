@@ -13,7 +13,8 @@ public class Producto {
     String marca;
 	@Size(min=1, max=500, message = "El campo descripcion debe tener una longitud entre 1 y 500 caracteres.")
     String descripcion;
-	@Pattern(regexp="\\d{6}", message="El campo existencia debe estar compuesto de digitos ")
+	@NotEmpty(message="El campo no debe estar vacio")
+	@Pattern(regexp="^\\d*$", message="El campo existencia debe estar compuesto de digitos ")
     String existencias;
 	@Pattern(regexp="^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$",message="El campo fecha debe ser fomato dd/mm/yyyy")
     String fechaIngreso;
